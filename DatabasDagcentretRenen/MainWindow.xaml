@@ -1,0 +1,36 @@
+﻿<Window x:Class="DatabasDagcentretRenen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:DatabasDagcentretRenen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListView x:Name="lvChildrenStaff" HorizontalAlignment="Left" Height="234" Margin="87,68,0,0" VerticalAlignment="Top" Width="679" SelectionChanged="lvChildrenStaff_SelectionChanged" MouseDoubleClick="lvChildrenStaff_MouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Förnamn" Width="75" DisplayMemberBinding="{Binding FirstName}"/>
+                        <GridViewColumn Header="Efternamn" Width="120" DisplayMemberBinding="{Binding LastName}"/>
+                        <GridViewColumn Header="Avdelning" Width="120" DisplayMemberBinding="{Binding Section}"/>
+                        <GridViewColumn Header="Ankomsttid" Width="120" DisplayMemberBinding="{Binding StartTime}"/>
+                        <GridViewColumn Header="Avgångstid" Width="120" DisplayMemberBinding="{Binding EndTime}"/>
+                        <GridViewColumn Header="Närvarostatus" Width="120" DisplayMemberBinding="{Binding Action}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ComboBox x:Name="cmbStaff" HorizontalAlignment="Left" Margin="87,39,0,0" VerticalAlignment="Top" Width="189" SelectionChanged="cmbStaff_SelectionChanged" Height="24" SelectedIndex="0"/>
+        <DatePicker x:Name="dateP" HorizontalAlignment="Left" Margin="553,39,0,0" VerticalAlignment="Top" FirstDayOfWeek="Monday" SelectedDate="{x:Static sys:DateTime.Now}" SelectedDateChanged="dateP_SelectedDateChanged" Width="97"  />
+        <Label x:Name="lblBreakfast" Content="0 barn ska ha frukost idag" HorizontalAlignment="Left" Margin="204,367,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="btnAllKids" Content="Visa dagens hjord" HorizontalAlignment="Left" Margin="655,39,0,0" VerticalAlignment="Top" Width="111" Height="24" Click="btnAllKids_Click" RenderTransformOrigin="0.685,0.458"/>
+        <Button x:Name="btnAStaffsKids" Content="Visa lärares hjord" HorizontalAlignment="Left" Margin="281,39,0,0" VerticalAlignment="Top" Width="111" Height="24" Click="btnAStaffsKids_Click"/>
+        <ListBox x:Name="lstAllergy" HorizontalAlignment="Left" Height="77" Margin="427,321,0,0" VerticalAlignment="Top" Width="339" BorderBrush="White" FontSize="14"/>
+        <Button x:Name="button" Content="Mer information" HorizontalAlignment="Left" Margin="87,307,0,0" VerticalAlignment="Top" Width="106" Click="button_Click"/>
+        <Label x:Name="label" Content="Inloggad lärare (här kan man välja vem fan man vill men i 'verkligheten' skulle en lärare loggat in)" HorizontalAlignment="Left" Margin="87,10,0,0" VerticalAlignment="Top" Width="540"/>
+        <Button x:Name="btnChangeGame" Content="Byt till VH" HorizontalAlignment="Left" Margin="10,389,0,0" VerticalAlignment="Top" Width="75" Click="btnChangeGame_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,22 @@
+﻿<Window x:Class="DatabasDagcentretRenen.childpagefromstaff"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DatabasDagcentretRenen"
+        mc:Ignorable="d"
+        Title="childpagefromstaff" Height="465.684" Width="429.684">
+    <Grid>
+        <Grid.ColumnDefinitions>
+
+
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="lstKid" HorizontalAlignment="Left" Height="56" Margin="10,52,0,0" VerticalAlignment="Top" Width="270" BorderBrush="White"/>
+        <ListBox x:Name="lstGuardian" HorizontalAlignment="Left" Height="92" Margin="10,171,0,0" VerticalAlignment="Top" Width="270" BorderBrush="White"/>
+        <ListBox x:Name="lstPickup" HorizontalAlignment="Left" Height="90" Margin="10,321,0,0" VerticalAlignment="Top" Width="270" BorderBrush="White"/>
+        <Label x:Name="lblChildName" Content="SKITUNGE" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Height="42" Width="351"/>
+        <Label x:Name="lblChildName_Copy" Content="Vårdnadshavare" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Height="42" Width="190"/>
+        <Label x:Name="lblChildName_Copy1" Content="Godkända upphämtare" HorizontalAlignment="Left" Margin="10,274,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Height="42" Width="270"/>
+
+    </Grid>
+</Window>
